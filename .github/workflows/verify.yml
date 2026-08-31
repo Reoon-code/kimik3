@@ -1,0 +1,23 @@
+name: verify-lite-wrapper
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  wrapper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax
+        run: |
+          bash -n scripts/bootstrap.sh
+          bash -n scripts/run-4gb.sh
+          bash -n scripts/verify.sh
+      - name: Contract smoke test
+        run: |
+          ./scripts/run-4gb.sh --help
+          if ./scripts/run-4gb.sh --model x --trunk y --ids 1 --incremental; then
+            echo "wrapper accepted incremental mode" >&2
+            exit 1
+          fi

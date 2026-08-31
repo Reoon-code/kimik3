@@ -1,0 +1,7 @@
+upstream/
+k3_4gb_run.json
+*.log
+*.bin
+*.safetensors
+k3model/
+k3trunk/

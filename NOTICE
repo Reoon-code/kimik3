@@ -1,0 +1,10 @@
+KimiK3-4G
+Copyright 2026 KimiK3-4G contributors
+
+This distribution integrates with and depends on:
+  kimi-k3-in-c by FareedKhan-dev and contributors
+  https://github.com/FareedKhan-dev/kimi-k3-in-c
+  Licensed under the Apache License, Version 2.0.
+
+The upstream source is not copied into this repository. bootstrap.sh checks it out at a
+pinned commit and its original LICENSE, NOTICE, copyright and attribution remain intact.
